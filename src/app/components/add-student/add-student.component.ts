@@ -21,10 +21,10 @@ export class AddStudentComponent implements OnInit {
     this.form = fb.group({
       id: this.students.length + 1,
       name: ['', [Validators.required, Validators.maxLength(25)]],
-      lastname: ['', [Validators.required, Validators.maxLength(25)]],
+      lastname: ['', [Validators.required, Validators.maxLength(40)]],
       email: ['', [Validators.required, Validators.email]],
-      average: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(10)]],
-      active: ['', Validators.required]
+      average: ['', [Validators.required, Validators.min(1), Validators.max(10)]],
+      active: ''
     });
   }
 
@@ -36,10 +36,12 @@ export class AddStudentComponent implements OnInit {
   }
 
   public save() {
-    this.dialogRef.close(this.form.value);
+    if (this.form.valid) {
+      this.dialogRef.close(this.form.value);
+    }
   }
 
-  /*public hasError = (controlName: string, errorName: string) => {
-    return this.form.controls[controlName].hasError(errorName);
-  }*/
+  public errorHandling = (control: string, error: string) => {
+    return this.form.controls[control].hasError(error);
+  }
 }
