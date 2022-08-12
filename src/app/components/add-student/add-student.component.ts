@@ -23,7 +23,7 @@ export class AddStudentComponent implements OnInit {
       name: ['', [Validators.required, Validators.maxLength(25)]],
       lastname: ['', [Validators.required, Validators.maxLength(25)]],
       email: ['', [Validators.required, Validators.email]],
-      average: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(11)]],
+      average: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(10)]],
       active: ['', Validators.required]
     });
   }
