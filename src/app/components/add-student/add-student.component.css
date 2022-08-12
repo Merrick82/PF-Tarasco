@@ -1,0 +1,19 @@
+.title {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.spaces {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.close {
+    background: red;
+    color: white;
+}
+
+.save {
+    background: green;
+    color: white;
+}

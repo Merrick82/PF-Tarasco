@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+}
+
+.title-page {
+    text-align: center;
+    font-size: 4rem;
+    padding-bottom: 25px;
+    color: black;
+}
+
+.header-table {
+    padding-left: 24px;
+    padding-right: 24px;
+    /* font-size: 1.5rem; */
+}
+
+.column-table {
+    text-align: left;
+}
+
+.add {
+    padding-top: 20px;
+    text-align: center;
+}

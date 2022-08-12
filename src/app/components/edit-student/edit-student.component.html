@@ -1,0 +1,30 @@
+<h1 mat-dialog-title class="title">Editar Estudiante</h1>
+<div mat-dialog-content>
+    <form [formGroup]="form">
+        <mat-form-field appearance="fill" class="spaces">
+            <mat-label>Nombre</mat-label>
+            <input formControlName="name" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="spaces">
+            <mat-label>Apellido</mat-label>
+            <input formControlName="lastname" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="spaces">
+            <mat-label>Mail</mat-label>
+            <input formControlName="email" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="spaces">
+            <mat-label>Promedio</mat-label>
+            <input formControlName="average" matInput>
+        </mat-form-field>
+
+        <mat-slide-toggle formControlName="active" class="spaces">Activo</mat-slide-toggle>
+    </form>
+</div>
+<div mat-dialog-actions align="center" style="padding-top: 15px;">
+    <button mat-button class="close" (click)="close()">Cerrar</button>
+    <button mat-button class="save" (click)="save()">Grabar</button>
+</div>
